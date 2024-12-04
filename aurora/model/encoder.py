@@ -238,7 +238,7 @@ class Perceiver3DEncoder(nn.Module):
         x = x + pos_encode + scale_encode
 
         ## NOTE - for testing, zero-out surface contribution
-        x[:, -1] *= 0
+        x[:, 0] *= 0
         ##
 
         # for testing
